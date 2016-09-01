@@ -4,7 +4,7 @@
 #ifndef VERSIONALREADYCHOSEN              // used for batch compiling
 
 #ifndef DATADIR
-#define DATADIR "/usr/share/games/wolf3d/"
+#define DATADIR "" // Load from same directory
 #endif
 
 /* Defines used for different versions */
