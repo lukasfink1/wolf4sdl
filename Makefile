@@ -6,7 +6,7 @@ BINARY    ?= wolf3d
 PREFIX    ?= /usr/local
 MANPREFIX ?= $(PREFIX)/share/man/
 MANPAGE   ?= man6/wolf4sdl.6
-DATADIR   ?= $(PREFIX)/share/games/wolf3d/
+#DATADIR   ?= $(PREFIX)/share/games/wolf3d/
 
 INSTALL         ?= install
 INSTALL_PROGRAM ?= $(INSTALL) -m 555 -s
@@ -27,6 +27,7 @@ CFLAGS += -Wpointer-arith
 CFLAGS += -Wreturn-type
 CFLAGS += -Wwrite-strings
 CFLAGS += -Wcast-align
+#CFLAGS += -g -Og
 
 
 ifdef DATADIR
