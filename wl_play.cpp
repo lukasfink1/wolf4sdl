@@ -322,9 +322,9 @@ void PollKeyboardMove (void)
     if (Keyboard[dirscan[di_south]])
         controly += delta;
     if (Keyboard[dirscan[di_west]])
-        controlx -= delta;
+        buttonstate[bt_strafeleft] = true;
     if (Keyboard[dirscan[di_east]])
-        controlx += delta;
+        buttonstate[bt_straferight] = true;
 }
 
 
@@ -348,7 +348,8 @@ void PollMouseMove (void)
     mouseymove -= screenHeight / 2;
 
     controlx += mousexmove * 10 / (13 - mouseadjustment);
-    //controly += mouseymove * 20 / (13 - mouseadjustment);
+    if (buttonstate[bt_strafe])
+        controly += mouseymove * 20 / (13 - mouseadjustment);
 }
 
 
